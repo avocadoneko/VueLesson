@@ -5,3 +5,14 @@
 .v-enter, .v-leave-to {
   opacity: 0;
 }
+
+circle{
+  fill: #333;
+  transition: all 0.4s cubic-bezier(.96,.04,.04,.96);
+  stroke: rgb(235, 244, 112);
+  stroke-width: 10px;
+}
+.active{
+  fill: black;
+  stroke-width: 70px;
+}
