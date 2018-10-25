@@ -5,19 +5,15 @@
   <title>Vue.js App</title>
   <link href="main.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #4f4f4f;">
   <div id="app">
-    <!-- ここにテンプレート -->
-    <p>{{ message }}</p>
-    <input v-model="message">
-    <ol>
-      <li v-for="item in list">{{ item }}</li>
-    </ol>
-    <button v-on:click="show=!show">切り替え</button>
-    <transition>
-      <p v-if="show">Hello Vue.js!</p>
-    </transition>
-  </div>
+    <svg viewbox="0 0 300 300" width="300" height="300">
+    <circle r=50 cx=150 cy=150 @click="active = !active" :class="{'active': active}"></circle>
+    </svg>
+    <svg viewbox="0 0 300 300" width="500" height="300">
+    <circle r=50 cx=10 cy=150 @click="active = !active" :class="{'active': active}"></circle>
+    </svg>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13"></script>
   <script src="main.js"></script>
 </body>
