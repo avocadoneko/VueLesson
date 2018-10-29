@@ -1,9 +1,13 @@
-var scroll = new SmoothScroll()
 new Vue({
   el: '#app',
-  methods: {
-    scrollTop: function () {
-      scroll.animateScroll(0)
+  data: {
+    width: 800,
+    height: 600
+  },
+  computed: {
+    halfWidth: {
+      get: function() { return this.width / 2 },
+      set: function (val) { this.width = val * 2 },
     }
   }
 })
